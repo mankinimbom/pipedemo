@@ -1,0 +1,629 @@
+sudo apt update -y
+sudo init 0
+ll
+sudo apt update -y
+sudo apt upgrade -y
+sudo apt update -y
+sudp apt update -y
+sudo apt upgrade -y
+sudo apt update -y
+wget https://cloudron.io/cloudron-setup
+ll
+chmod +x ./cloudron-setup
+ll
+./cloudron-setup
+sudo -i
+sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl enable ssh --now
+sudo systemctl status ssh
+ip a
+fwupdmgr get-upgrades
+ll
+sudo -i
+ll
+history
+fwupdmgr get-upgrades
+sudo apt upgrade -y
+sudo apt update -y
+sudo apt install ifconfig
+exit
+sudo apt install gedit -y
+gedit frontdoor
+kubectl get ports
+ll
+gedit frontdoor
+git status
+git
+clear
+sudo adduser mike
+sudo su - mike
+zoom
+chrome
+ll
+cat /etc/passwd
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+sudo apt update
+sudo apt-get -y install postgresql postgresql-contrib
+sudo systemctl enable postgresql
+wget -qO- https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo tee /etc/apt/trusted.gpg.d/pgdg.asc &>/dev/null
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+sudo apt update
+sudo apt-get -y install postgresql postgresql-contrib
+sudo systemctl enable postgresql
+sudo passwd postgres
+su - postgres
+sudo bash
+sudo vim /etc/security/limits.conf
+sudo nano /etc/security/limits.conf
+sudo vim /etc/sysctl.conf
+sudo apt install vim
+sudo vim /etc/sysctl.conf
+sudo reboot
+sudo snap install slack
+sudo adduser kafka
+su -l kafka
+sudo usermod -aG sudo kafka
+su -l kafka
+su -l kafka
+sudo apt install gdebi
+sudo apt install ./zoom_amd64.deb
+ll
+cd Downloads/
+sudo apt install ./zoom_amd64.deb
+sudo snap install slack --classic
+ll
+mkdir sonar
+ll
+cd sonar/
+ll
+sudo wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.2.77730.zip
+ll
+sudo apt install unzip
+sudo unzip sonarqube-9.9.2.77730.zip -d /opt
+ll
+sudo mv /opt/sonarqube-9.9.2.77730 /opt/sonarqube
+sudo groupadd sonar
+sudo useradd -c "user to run SonarQube" -d /opt/sonarqube -g sonar sonar
+sudo chown sonar:sonar /opt/sonarqube -R
+sudo vim /opt/sonarqube/conf/sonar.properties
+sudo vim /etc/systemd/system/sonar.service
+sudo systemctl start sonar
+sudo systemctl enable sonar
+ll
+sudo systemctl status sonar
+sudo vim /etc/systemd/system/sonar.service
+sudo systemctl start sonar
+sudo systemctl stop sonar
+sudo systemctl start sonar
+sudo systemctl enable sonar
+sudo systemctl status sonar
+sudo systemctl stop sonar --now
+sudo systemctl start sonar
+sudo systemctl status sonar
+ip a
+ll
+pwd
+cd
+cd /opt
+ll
+cd sonarqube/
+ll
+cd
+java version
+java -version
+sudo apt update
+sudo apt install openjdk-11-jre
+ll
+mkdir nexus
+cd nexus/
+ll
+wget https://download.sonatype.com/nexus/3/nexus-3.61.0-02-unix.tar.gz
+ll
+tar -xvzf nexus-3.61.0-02-unix.tar.gz
+ll
+sudo mv nexus-3.61.0-02 /opt/nexus
+ll
+sudo adduser nexus
+sudo chown -R nexus:nexus /opt/nexus
+sudo nano /etc/systemd/system/nexus.service
+ll
+
+sudo systemctl enable nexus
+sudo systemctl status nexus
+sudo apt install openjdk8-jdk
+sudo apt install jdk8-jdk
+sudo apt install openjdk-8-jdk
+sudo systemctl status nexus
+sudo -u nexus /opt/nexus/bin/nexus start
+sudo systemctl start nexus
+sudo systemctl status nexus
+sudo systemctl stop nexus --now
+sudo systemctl status nexus
+sudo systemctl stop nexus --now
+ll
+sudo mv sonatype-work/ /opt/nexus
+ll
+cd /opt
+ll
+cd nexus
+ll
+cd
+cd nexus
+ll
+tar -xvzf nexus-3.61.0-02-unix.tar.gz
+ll
+nexus-work=/opt/nexus/sonatype-work
+ll
+sudo mv nexus-3.61.0-02 /opt/nexus
+sudo mv sonatype-work /opt
+ll
+cd /opt
+ll
+cd sonatype-work/
+pwd
+cd ..
+cd nexus
+pwd
+sudo chown -R nexus:nexus /opt/nexus/sonatype-work
+sudo nano /opt/nexus/bin/nexus.rc
+sudo systemctl start nexus
+sudo systemctl status nexus
+sudo nano /opt/nexus/bin/nexus.rc
+sudo systemctl stop nexus --now
+sudo systemctl start nexus
+sudo systemctl status nexus
+cd /opt/nexus/sonatype-work/nexus3/log
+ll
+sudo tail -n 50 nexus.log
+sudo journalctl -xeu nexus.service
+cd
+sudo nano /opt/nexus/bin/nexus.rc
+sudo systemctl start nexus
+sudo systemctl status nexus
+sudo journalctl -xeu nexus.service
+sudo systemctl reload
+sudo systemctl reloadsudo systemctl status nexus
+sudo systemctl status nexus
+sudo nano /opt/nexus/bin/nexus.rc
+sudo systemctl daemon-reload
+sudo systemctl status nexus
+sudo systemctl start nexus
+sudo systemctl status nexus
+cd sonar/
+ll
+vim nexus.sh
+chmod 777 nexus.sh
+ll
+./nexus.sh
+cd
+mkdir prometheus
+cd prometheus/
+vim prometheus.sh
+ll
+sudo chmod 777 prometheus.sh
+sudo ./prometheus.sh
+vim prometheus.sh
+rm prometheus.sh
+vim prometheus.sh
+sudo chmod 777 prometheus.sh
+sudo ./prometheus.sh
+cd
+mkdir grafana.sh
+mv grafana.sh grafana
+cd grafana/
+vim grafana.sh
+ll
+sudo chmod 777 grafana.sh
+sudo ./grafana.sh
+systemctl start grafana-server
+sudo systemctl start grafana-server
+systemctl status grafana-server --no-pager
+sudo systemctl status grafana-server
+sudo apt update -y
+dpkg --print-foreign-architectures
+sudo dpkg --remove-architecture i386
+sudo systemctl stop grafana-server --now
+sudo dpkg --remove-architecture i386
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+sudo ss -tuln | grep 3000
+sudo netstat -tuln | grep 3000
+sudo apt install netstat
+sudo ss -tuln | grep 3000
+sudo ufw allow 3000/tcp
+cat /var/log/grafana/grafana.log
+sudo cat /var/log/grafana/grafana.log
+sudo systemctl restart grafana-server
+sudo cat /var/log/grafana/grafana.log
+docker ps
+sudo docker ps
+ll
+sudo cat /var/log/grafana/grafana.log
+sudo apt install grafana
+sudo apt remove grafana
+sudo systemctl status grafana-server
+sudo apt install -y gnupg2 curl software-properties-common
+curl -fsSL https://packages.grafana.com/gpg.key|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/grafana.gpg
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
+sudo apt update
+sudo apt -y install grafana
+sudo systemctl enable --now grafana-server
+systemctl status grafana-server.service
+sudo apt -y install ufw
+sudo ufw allow ssh
+sudo ufw allow 3000/tcp
+systemctl status grafana-server.service
+sudo apt update
+sudo apt install net-tools
+netstat -tuln | grep 8081
+ss -tuln | grep 8081
+sudo init 6
+ip a
+fwupdmgr get-upgrades
+sudo dpkg --remove-architecture i386
+ss -tuln | grep 8081
+ss -tuln | grep 3000
+netstat -tuln | grep 3000
+ss -tuln | grep 3000
+sudo netstat -tulnp | grep 3000
+sudo ss -tulnp | grep 3000
+ps -f -p 3573
+pstree -p 3573.
+pstree -p 3573
+pstree -p 3573kill 3573kill 3573
+kill 3573
+sudo kill 3573
+pstree -p 3573
+ps -f -p 3573
+sudo netstat -tulnp | grep 3000
+systemctl status grafana-server.service
+sudo systemctl restart grafana-server
+systemctl status grafana-server.service
+mkdir jfrog
+cd jfrog
+wget -O jfrog-artifactory-pro.tar.gz "https://releases.jfrog.io/artifactory/artifactory-pro/org/artifactory/pro/jfrog-artifactory-pro/[RELEASE]/jfrog-artifactory-pro-[RELEASE]-linux.tar.gz"
+cd
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install Jenkins
+sudo apt-get install Jenkinssudo apt-get install Jenkins
+sudo apt-get install Jenkins
+sudo apt-get update
+sudo apt install Jenkins
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/nullcurl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+sudo curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+sudo echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install Jenkins
+sudo apt install openjdk-17-jre
+sudo apt-get install Jenkins
+sudo curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install Jenkins
+sudo ap install openjdr-11
+sudo apt install openjdr-11
+sudo apt install openjdk-11
+sudo apt install openjdk-11-jdk
+sudo apt-get install Jenkins
+echo "deb https://releases.jfrog.io/artifactory/artifactory-debs xenial main" | sudo tee -a /etc/apt/sources.list.d/artifactory.list
+curl -fsSL  https://releases.jfrog.io/artifactory/api/gpg/key/public|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/artifactory.gpg
+sudo apt update
+sudo apt install jfrog-artifactory-oss -y
+sudo systemctl start artifactory.service
+sudo systemctl enable artifactory.service
+sudo systemctl status artifactory.service
+sudo tail -f /var/opt/jfrog/artifactory/log/artifactory-service.log
+sudo systemctl status artifactory.service
+sudo netstat -tuln | grep 8082
+sudo ss -tuln | grep 8082
+sudo lsof -i :8082
+cd $JFROG_HOME/artifactory/var/etc/artifactory/
+cd /etc
+ll
+ls
+ll
+cd
+ll
+pwd
+SELECT * FROM artifactory_servers;
+sudo netstat -tuln | grep 8082
+sudo lsof -i :8082
+sudo systemctl status artifactory.service
+sudo lsof -i :8082
+sudo systemctl stop artifactory.service
+sudo systemctl status artifactory.service
+sudo systemctl start artifactory.service
+sudo systemctl status artifactory.service
+sudo tail -f /var/opt/jfrog/artifactory/log/artifactory-service.log
+curl localhost:8081
+sudo nano $JFROG_HOME/artifactory/var/etc/system.yaml
+sudo nano $JFROG_HOME/artifactory/etc/system.yaml
+cd $JFROG_HOME/artifactory/
+cd ..
+ll
+pwd
+cd paradigmit/
+ll
+cd jfrog/
+ll
+sudo apt remove jfrog-artifactory-oss -y
+ll
+wget https://releases.jfrog.io/artifactory/bintray-artifactory/org/artifactory/oss/jfrog-artifactory-oss/7.71.2/jfrog-artifactory-oss-7.71.2-linux.tar.gz
+ll
+tar -zxvf jfrog-artifactory-oss-7.71.2-linux.tar.gz
+ll
+sudo dpkg -i 
+sudo dpkg -i jfrog-artifactory-oss-7.71.2.deb
+cd artifactory-oss-7.71.2/
+ll
+cd var/
+ll
+cd etc/
+ll
+cd artifactory/
+ll
+cd plugins/
+ll
+cd ../../..
+cd ..
+ll
+cd ..
+ll
+cd artifactory-oss-7.71.2/
+ll
+cd app/
+ll
+cd bin/
+ll
+cd ../..
+cd ..
+ll
+tar -zxvf jfrog-artifactory-pro.tar.gz
+ll
+sudo dpkg -i artifactory-pro-7.71.2/
+cd artifactory-pro-7.71.2/
+ll
+cd app/
+ll
+cd ..
+ll
+tree app/
+sudo apt install tree -y
+tree app/
+ll
+cd var/
+ll
+cd bootstrap/
+ll
+cd artifactory/
+ll
+cd tomcat/
+ll
+cd lib/
+ll
+cd ../../../..
+ll
+cd etc/
+ll
+cd artifactory/
+ll
+cd plugins/
+ll
+cd ../../../../
+ll
+cd app/
+ll
+cd bin/
+ll
+./installService.sh
+sudo ./installService.sh
+systemctl start artifactory.service
+sudo systemctl start artifactory.service
+systemctl start artifactory.service
+systemctl status artifactory.service" and "journalctl -xeu artifactory.service
+systemctl status artifactory.service
+sudo systemctl stop artifactory.service
+cd ../..
+ll
+cd ..
+vim jf.sh
+sudo chmod 777 jf.sh
+sudo ./jf.sh
+ll
+rm jf.sh
+vim jf.sh
+sudo chmod 777 jf.sh
+sudo ./jf.sh
+rm jf.sh
+vim jf.sh
+sudo chmod 777 jf.sh
+sudo ./jf.sh
+ll
+rm -rf *
+sudo rm -rf *
+ll
+vim jf.sh
+sudo chmod 777 jf.sh
+sudo ./jf.sh
+cat /opt/jfrog/artifactory/var/etc/system.yaml
+systemctl status artifactory
+ll
+cat <<'EOF' > jf.sh
+#!/bin/bash
+
+# Update System
+sudo apt update
+sudo apt upgrade -y
+
+# Install required dependencies (OpenJDK 11)
+sudo apt install -y openjdk-11-jdk
+
+# Add Artifactory to the source list
+echo "deb https://releases.jfrog.io/artifactory/artifactory-debs xenial main" | sudo tee -a /etc/apt/sources.list.d/artifactory.list
+
+# Add the GPG key for the Artifactory repository
+curl -fsSL https://releases.jfrog.io/artifactory/api/gpg/key/public | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/artifactory.gpg
+
+# Update package lists
+sudo apt update
+
+# Install Artifactory
+sudo apt install jfrog-artifactory-pro -y
+
+# Create a dedicated user (if it doesn't already exist)
+if ! id "artifactory" &>/dev/null; then
+    sudo useradd -r -m -d /opt/jfrog/artifactory -s /bin/bash artifactory
+fi
+
+# Set ownership to the Artifactory directories
+sudo chown -R artifactory: /opt/jfrog/artifactory
+sudo chown -R artifactory: /var/opt/jfrog/artifactory
+
+# Set correct permissions
+find /opt/jfrog/artifactory -type d -exec sudo chmod 755 {} \;
+find /opt/jfrog/artifactory -type f -exec sudo chmod 644 {} \;
+find /var/opt/jfrog/artifactory -type d -exec sudo chmod 755 {} \;
+find /var/opt/jfrog/artifactory -type f -exec sudo chmod 644 {} \;
+
+# Configure Artifactory
+# Note: Edit the following configuration as per your requirements
+sudo mkdir -p /var/opt/jfrog/artifactory/etc
+cat <<EOF2 | sudo tee /var/opt/jfrog/artifactory/etc/system.yaml
+shared:
+  node:
+    id: "artifactory"
+    httpPort: 8082
+
+router:
+  entrypoints:
+    internal:
+      port: 8083
+EOF2
+
+# Ensure correct permissions on the configuration file
+sudo chown -R artifactory: /var/opt/jfrog/artifactory/etc
+
+# Reload and enable Artifactory service
+sudo systemctl daemon-reload
+sudo systemctl enable artifactory
+sudo systemctl restart artifactory
+
+# Check the service status
+sudo systemctl status artifactory
+EOF
+
+ll
+cat jf.sh
+sudo ./jf.sh
+cat <<'EOF' > jf.sh
+#!/bin/bash
+
+# Update System
+sudo apt update
+sudo apt upgrade -y
+
+# Install required dependencies (OpenJDK 11)
+sudo apt install -y openjdk-11-jdk
+
+# Backup existing Artifactory list if it exists
+if [ -f "/etc/apt/sources.list.d/artifactory.list" ]; then
+    sudo mv /etc/apt/sources.list.d/artifactory.list /etc/apt/sources.list.d/artifactory.list.bak
+fi
+
+# Add Artifactory to the source list (Avoid duplication)
+echo "deb https://releases.jfrog.io/artifactory/artifactory-debs xenial main" | sudo tee /etc/apt/sources.list.d/artifactory.list
+
+# Handle the GPG key
+GPG_KEY_URL="https://releases.jfrog.io/artifactory/api/gpg/key/public"
+GPG_KEY_FILE="/etc/apt/trusted.gpg.d/artifactory.gpg"
+if [ ! -f "$GPG_KEY_FILE" ]; then
+    curl -fsSL "$GPG_KEY_URL" | sudo gpg --dearmor -o "$GPG_KEY_FILE"
+else
+    echo "Artifactory GPG key already exists."
+fi
+
+# Update package lists
+sudo apt update
+
+# Handle potential GPG key conflicts
+# If you get a GPG key conflict, you might need to manually remove the conflicting key.
+# For example:
+# sudo rm /usr/share/keyrings/artifactory-archive-keyring.gpg
+
+# Install Artifactory
+sudo apt install jfrog-artifactory-pro -y
+
+# Rest of your installation script...
+EOF
+
+sudo ./jf.sh
+Setup Tomcat.txt
+#!/bin/bash
+#Update the apt repository
+sudo apt-get update
+#Install tomcat9
+sudo apt-get install -y tomcat9
+#Install tomcat9-admin
+sudo apt-get install -y tomcat9-admin
+# Set PasswordAthentication from no to yes
+sudo sed -i "/^[^#]*PasswordAuthentication[[:space:]]no/c\PasswordAuthentication yes" /etc/ssh/sshd_config
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]     https://pkg.jenkins.io/debian-stable binary/ | sudo tee     /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo systemctl status jenkins
+cd /etc/default/jenkins
+sudo nano /etc/default/jenkins
+sudo systemctl restart jenkins
+sudo ufw allow 8086
+sudo ufw reload
+sudo ss -tulwn | grep 8086
+sudo lsof -i :8086
+sudo nano /etc/default/jenkins
+sudo systemctl restart jenkins
+sudo lsof -i :8086
+sudo nano /etc/default/jenkins
+sudo systemctl restart jenkins
+sudo lsof -i :8181
+sudo systemctl stop jenkins
+sudo systemctl restart jenkins
+sudo systemctl status jenkins
+sudo lsof -i :8181
+sudo journalctl -u jenkins
+sudo ss -tulwn | grep 8181
+ps
+ps -ef | grep
+ps -ef | grep jenkins
+sudo systemctl status jenkins
+sudo journalctl -u jenkins --no-pager | less
+ps -ef | grep jenkins
+kill 8511
+ps -ef | grep jenkins
+sudo systemctl stop jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo init 6
+sudo systemctl status jenkins
+ps -ef | grep jenkins
+sudo systemctl daemon-reload
+sudo systemctl enable splunk
+sudo systemctl start splunk
+sudo systemctl status splunk
+ps -ef | grep splunk
+ps aux | grep splunk
+sudo systemctl status splunk
+sudo systemctl restart splunk
+sudo vim /etc/systemd/system/splunk.service
+sudo systemctl daemon-reload
+sudo systemctl enable splunk
+sudo systemctl start splunk
+sudo systemctl status splunk
+sudo init 6
+cat /var/lib/jenkins/secrets/initialAdminPassword
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+docker ps
+netstat
+docker network create --driver bridge paradigmNet
+vim jenkins/Dockerfile
